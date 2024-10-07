@@ -1,0 +1,93 @@
+{
+	"pages": [
+		"projects/housevote/pages/default/index/default_index",
+		"projects/housevote/pages/about/index/about_index",
+		"projects/housevote/pages/search/search",
+		"projects/housevote/pages/my/index/my_index",
+		"projects/housevote/pages/my/reg/my_reg",
+		"projects/housevote/pages/my/edit/my_edit",
+		"projects/housevote/pages/my/foot/my_foot",
+		"projects/housevote/pages/my/fav/my_fav",
+		"projects/housevote/pages/news/index/news_index",
+		"projects/housevote/pages/news/detail/news_detail",
+		"projects/housevote/pages/admin/news/list/admin_news_list",
+		"projects/housevote/pages/admin/news/add/admin_news_add",
+		"projects/housevote/pages/admin/news/edit/admin_news_edit",
+		"projects/housevote/pages/admin/setup/about/admin_setup_about",
+		"projects/housevote/pages/admin/setup/about_list/admin_setup_about_list",
+		"projects/housevote/pages/admin/setup/qr/admin_setup_qr",
+		"projects/housevote/pages/admin/index/home/admin_home",
+		"projects/housevote/pages/admin/index/login/admin_login",
+		"projects/housevote/pages/admin/content/admin_content",
+		"projects/housevote/pages/admin/mgr/log/admin_log_list",
+		"projects/housevote/pages/admin/mgr/edit/admin_mgr_edit",
+		"projects/housevote/pages/admin/mgr/list/admin_mgr_list",
+		"projects/housevote/pages/admin/mgr/add/admin_mgr_add",
+		"projects/housevote/pages/admin/mgr/pwd/admin_mgr_pwd",
+		"projects/housevote/pages/admin/user/list/admin_user_list",
+		"projects/housevote/pages/admin/user/detail/admin_user_detail",
+		"projects/housevote/pages/admin/user/export/admin_user_export",
+		"projects/housevote/pages/vote/index/vote_index",
+		"projects/housevote/pages/vote/detail/vote_detail",
+		"projects/housevote/pages/admin/vote/list/admin_vote_list",
+		"projects/housevote/pages/admin/vote/add/admin_vote_add",
+		"projects/housevote/pages/admin/vote/edit/admin_vote_edit",
+		"projects/housevote/pages/vote/my_join_list/vote_my_join_list",
+		"projects/housevote/pages/vote/more/vote_more",
+		"projects/housevote/pages/admin/vote/join_list/admin_vote_join_list",
+		"projects/housevote/pages/admin/vote/result/admin_vote_result",
+		"cmpts/public/form/form_set/field/form_set_field",
+		"cmpts/public/form/form_show/content/form_show_content",
+		"pages/test1/test1"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#0156C0",
+		"navigationBarTitleText": "小区业主决策投票小程序",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"custom": false,
+		"backgroundColor": "#FFFFFF",
+		"color": "#999999",
+		"selectedColor": "#0156C0",
+		"list": [
+			{
+				"pagePath": "projects/housevote/pages/default/index/default_index",
+				"text": "首页",
+				"iconPath": "/projects/housevote/images/tabbar/home.png",
+				"selectedIconPath": "/projects/housevote/images/tabbar/home_cur.png"
+			},
+			{
+				"pagePath": "projects/housevote/pages/news/index/news_index",
+				"text": "公告通知",
+				"iconPath": "/projects/housevote/images/tabbar/service.png",
+				"selectedIconPath": "/projects/housevote/images/tabbar/service_cur.png"
+			},
+			{
+				"pagePath": "projects/housevote/pages/vote/index/vote_index",
+				"text": "业主投票",
+				"iconPath": "/projects/housevote/images/tabbar/activity.png",
+				"selectedIconPath": "/projects/housevote/images/tabbar/activity_cur.png"
+			},
+			{
+				"pagePath": "projects/housevote/pages/my/index/my_index",
+				"text": "我的",
+				"iconPath": "/projects/housevote/images/tabbar/my.png",
+				"selectedIconPath": "/projects/housevote/images/tabbar/my_cur.png"
+			}
+		]
+	},
+	"permission": {
+		"scope.userLocation": {
+			"desc": "获取你当前位置信息用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"cmpt-comm-list": "/cmpts/public/list/comm_list_cmpt",
+		"cmpt-picker": "/cmpts/public/picker/picker_cmpt",
+		"cmpt-modal": "/cmpts/public/modal/modal_cmpt"
+	},
+	"sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,48 @@
+<view class="main">
+	<view class="top">
+		<image mode="widthFix" src="../../../images/home.jpg" class="loading" />
+	</view>
+
+	<view class="box">
+		<view class="inner">
+
+			<view class="item" bindtap="url" data-type="relaunch" data-url="../../news/index/news_index">
+				<view class="left">
+					<image mode="aspectFill" src="../../../images/home/1.png" />
+				</view> 
+				<view class="right">
+					<view class="title">通知公告</view>
+					<view class="desc">本小区最新通知公告</view>
+				</view>
+
+			</view>
+
+			<view class="item" bindtap="url" data-type="relaunch" data-url="../../vote/index/vote_index">
+				<view class="left">
+					<image mode="aspectFill" src="../../../images/home/2.png" />
+				</view> 
+				<view class="right">
+					<view class="title">业主决策</view>
+					<view class="desc">对小区重大公共事务进行投票决策</view>
+				</view>
+			</view> 
+
+			<view class="item" bindtap="url" data-type="relaunch" data-type="relaunch" data-url="../../my/index/my_index">
+				<view class="left">
+					<image mode="aspectFill" src="../../../images/home/3.png" />
+				</view> 
+				<view class="right">
+					<view class="title">业主中心</view>
+					<view class="desc">业主个人信息登记和认证</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+</view>
+
+<block wx:if="{{skin.IS_SUB}}">
+	<import src="../../tpls/menu_tpl.wxml" />
+	<template is="menuTpl" data="{{curMenu:'default_index',returnHome:false}}" />
+</block>

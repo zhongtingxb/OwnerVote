@@ -1,0 +1,30 @@
+<view wx:if="{{isLoad===null}}" class="margin-top load notexist text-l load-project"></view>
+<view wx:if="{{isLoad===false}}" class="margin-top load loading text-l load-project"></view>
+
+<block wx:if="{{isLoad}}">
+	<view class="main main-vote-detail">
+	 
+
+		<!--图文begin-->
+		<view class="article-box" wx:if="{{vote.VOTE_OBJ.desc && vote.VOTE_OBJ.desc.length>0}}">
+			<view class="article">
+				<view class="title margin-top-s text-l">投票须知</view>
+
+				<block wx:for="{{vote.VOTE_OBJ.desc}}" wx:key="key">
+					<view class="content" wx:if="{{item.type=='text'}}">
+						<text user-select="{{true}}">{{item.val}}</text>
+					</view>
+
+					<view class="pics" wx:if="{{item.type=='img'}}">
+						<image bindtap="url" data-type='img' data-url="{{item.val}}" show-menu-by-longpress="{{true}}" class="loading" mode='widthFix' lazy-load="true" src="{{item.val}}">
+						</image>
+					</view>
+				</block>
+			</view>
+		</view>
+		<!--图文END-->
+	</view>
+
+	 
+
+</block>

@@ -1,0 +1,71 @@
+<block wx:if="{{isAdmin&&isLoad}}">
+	<cmpt-comm-list source='admin' _params="{{_params}}" type="admin-vote-list" search="{{search||''}}" _menus="{{sortMenus}}" _items="{{sortItems}}" route="admin/vote_join_list" sortMenusDefaultIndex="0" topBottom="50" placeholder="搜索业主姓名，手机" bind:list="bindCommListCmpt">
+
+		<view slot="searchEnd">
+		 
+		</view>
+		<!-- List Begin -->
+		<view class="admin-comm-list">
+			<view wx:if="{{dataList && dataList.total }}" class="load text-grey">共有{{dataList.total}}条符合条件记录</view>
+
+			<view class="item" wx:for="{{dataList.list}}" wx:key="key">
+				<view class="no">{{index+1}}</view>
+				<view class="header">
+				 
+				</view>
+
+
+				<view class="info">
+				 
+					<!--<view class="info-item">
+						<view class="title">投票项目</view>
+						<view class="mao">：</view>
+						<view class="content">『{{item.VOTE_JOIN_VOTE_TITLE}}』</view>
+					</view>-->
+
+					<view class="info-item" bind:tap="url" data-url="../../user/detail/admin_user_detail?id={{item.VOTE_JOIN_USER_ID}}">
+						<view class="title">投票人</view>
+						<view class="mao">：</view>
+						<view class="content">{{item.user.USER_NAME}} <text class="margin-left-xs text-admin text-s">[用户详情]</text> </view>
+					</view> 
+
+					<view class="info-item">
+						<view class="title">电话</view>
+						<view class="mao">：</view>
+						<view class="content">{{item.user.USER_MOBILE}}  </view>
+					</view> 
+
+					<view class="info-item">
+						<view class="title">投票选项</view>
+						<view class="mao">：</view>
+						<view class="content">『{{item.VOTE_JOIN_ITEM_LABEL}} 』 </view>
+					</view> 
+
+					<view class="info-item">
+						<view class="title">投票时间</view>
+						<view class="mao">：</view>
+						<view class="content text-grey">{{item.VOTE_JOIN_ADD_TIME}}  </view>
+					</view> 
+				 
+				</view>
+			</view>
+
+		</view>
+		<!-- List END -->
+
+		<!--load begin-->
+		<import src="../../../../../../tpls/public/list_load_tpl.wxml" />
+		<template is="listLoadTpl" data="{{dataList,skin:'text-grey'}}" />
+		<!--load end-->
+
+
+	</cmpt-comm-list>
+
+	<cmpt-modal wx:if="{{itemModalShow}}" model:show="{{itemModalShow}}" type="dialog" title="投票数据统计"  class="modal-form" cancelText="返回" confirmText="确定">
+		<view class="form-group" wx:for="{{itemDetail}}"  wx:key="key">
+			<view class="title">{{item.label}}：{{item.cnt}}票 (占比{{item.per+'%'}})</view> 
+		</view> 
+		 
+	</cmpt-modal>
+
+</block>

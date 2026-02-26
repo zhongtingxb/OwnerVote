@@ -1,0 +1,21 @@
+<view class="admin-comm-list margin-top">
+	<view class="item" wx:for="{{result}}" wx:key="k">
+		<view class="info">
+			<view class="info-item">
+				<view class="title">选项</view>
+				<view class="mao">：</view>
+				<view class="content">{{item.label}}</view>
+			</view>
+			<view class="info-item">
+				<view class="title">票数</view>
+				<view class="mao">：</view>
+				<view class="content">{{item.cnt}}</view>
+			</view>
+			<view class="info-item">
+				<view class="title">占比</view>
+				<view class="mao">：</view>
+				<view class="content text-orange">{{item.per}}%</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,7 +1,7 @@
 /**
  * Notes: 投票实体
  * Ver : CCMiniCloud Framework 2.0.1 ALL RIGHTS RESERVED BY cclinux0730 (wechat)
- * Date: 2022-07-05 19:20:00 
+ * Date:  07-05 19:20:00 
  */
 
 const BaseProjectModel = require('./base_project_model.js');

@@ -1,7 +1,7 @@
 /**
  * Notes: 投票明细
  * Ver : CCMiniCloud Framework 2.6.1 ALL RIGHTS RESERVED BY cclinux0730 (wechat)
- * Date: 2022-07-13 19:20:00 
+ * Date:  07-13 19:20:00 
  */
 
 

@@ -1,6 +1,6 @@
 /** 
  * Ver : CCMiniCloud Framework 2.0.1 ALL RIGHTS RESERVED BY cclinux0730 (wechat)
- * Date: 2022-07-16 07:48:00 
+ * Date:  07-16 07:48:00 
  */
 const pageHelper = require('../../../../../helper/page_helper.js');
 const cloudHelper = require('../../../../../helper/cloud_helper.js');
